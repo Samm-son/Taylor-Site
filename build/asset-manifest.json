@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Taylor-Site/static/css/main.f3b8e623.css",
+    "main.js": "/Taylor-Site/static/js/main.029a10c9.js",
+    "index.html": "/Taylor-Site/index.html",
+    "main.f3b8e623.css.map": "/Taylor-Site/static/css/main.f3b8e623.css.map",
+    "main.029a10c9.js.map": "/Taylor-Site/static/js/main.029a10c9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3b8e623.css",
+    "static/js/main.029a10c9.js"
+  ]
+}
