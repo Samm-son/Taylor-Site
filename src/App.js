@@ -64,9 +64,9 @@ export default function App() {
           <h3 className="text-3xl font-semibold mb-4">Contact</h3>
           <p className="text-gray-300 mb-2">Let's connect!</p>
           <ul className="text-blue-400 space-y-1">
-            <li><a href="mailto:taylor@example.com">taylor@example.com</a></li>
+            <li><a href="mailto:taylor@example.com">tlsammons@gmail.com</a></li>
             <li><a href="https://www.linkedin.com/in/taylor-sammons">LinkedIn</a></li>
-            <li><a href="https://github.com/tsammons">GitHub</a></li>
+            <li><a href="https://github.com/samm-son">GitHub</a></li>
           </ul>
         </section>
       </main>
