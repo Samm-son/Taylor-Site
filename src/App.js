@@ -1,9 +1,16 @@
-
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Mail, Github, Linkedin } from "lucide-react";
 
 export default function App() {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => setVisible(true), []);
+
   return (
-    <div className="min-h-screen bg-gray-950 text-white font-sans">
+    <div
+      className={`min-h-screen bg-gray-950 text-white font-[Inter] transition-opacity duration-1000 ${
+        visible ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <header className="p-6 bg-gray-900 shadow-md">
         <div className="max-w-5xl mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">Taylor Sammons</h1>
@@ -19,9 +26,16 @@ export default function App() {
       <main className="max-w-5xl mx-auto p-6 space-y-20">
         <section id="hero" className="text-center py-20">
           <h2 className="text-4xl font-bold mb-4">Site Reliability Engineer</h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-6">
             Focused on observability, automation, and building resilient cloud systems across AWS, Salesforce, and more.
           </p>
+          <a
+            href="/TaylorSammons_Resume.pdf"
+            download
+            className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full text-white font-semibold transition"
+          >
+            Download Resume
+          </a>
         </section>
 
         <section id="about">
@@ -34,10 +48,10 @@ export default function App() {
         <section id="experience">
           <h3 className="text-3xl font-semibold mb-4">Experience</h3>
           <ul className="space-y-6">
-            <li>
+            <li className="bg-gray-900 rounded-2xl p-6 shadow-md">
               <h4 className="text-xl font-bold">Sunnova Energy (2021 - Present)</h4>
-              <p className="text-gray-400">Senior Site Reliability Engineer</p>
-              <ul className="list-disc list-inside text-gray-300">
+              <p className="text-gray-400 mb-2">Senior Site Reliability Engineer</p>
+              <ul className="list-disc list-inside text-gray-300 space-y-1">
                 <li>Reduced MTTD by 60% across major platforms</li>
                 <li>Led monitoring initiatives across AWS, Heroku, Salesforce</li>
                 <li>Built custom alerting systems with New Relic and PagerDuty</li>
@@ -47,26 +61,43 @@ export default function App() {
         </section>
 
         <section id="projects">
-          <h3 className="text-3xl font-semibold mb-4">Projects</h3>
-          <ul className="space-y-4 text-gray-300">
-            <li>
-              <h4 className="font-bold">Salesforce Monitoring Suite</h4>
-              <p>Real-time integration observability across all Salesforce Event types via New Relic Logs + Dashboards.</p>
-            </li>
-            <li>
-              <h4 className="font-bold">ECS Auto Scaling Optimizer</h4>
-              <p>Reduced idle costs by 35% through intelligent metrics-based Fargate scaling.</p>
-            </li>
-          </ul>
+          <h3 className="text-3xl font-semibold mb-8 text-center">Projects</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="bg-gray-900 rounded-2xl shadow-md p-6 hover:scale-[1.01] transition-transform duration-300">
+              <h4 className="font-bold text-xl mb-2">Salesforce Monitoring Suite</h4>
+              <p className="text-gray-300">
+                Real-time integration observability across all Salesforce Event types via New Relic Logs + Dashboards.
+              </p>
+            </div>
+            <div className="bg-gray-900 rounded-2xl shadow-md p-6 hover:scale-[1.01] transition-transform duration-300">
+              <h4 className="font-bold text-xl mb-2">ECS Auto Scaling Optimizer</h4>
+              <p className="text-gray-300">
+                Reduced idle costs by 35% through intelligent metrics-based Fargate scaling.
+              </p>
+            </div>
+          </div>
         </section>
 
         <section id="contact">
           <h3 className="text-3xl font-semibold mb-4">Contact</h3>
-          <p className="text-gray-300 mb-2">Let's connect!</p>
-          <ul className="text-blue-400 space-y-1">
-            <li><a href="mailto:taylor@example.com">tlsammons@gmail.com</a></li>
-            <li><a href="https://www.linkedin.com/in/taylor-sammons">LinkedIn</a></li>
-            <li><a href="https://github.com/samm-son">GitHub</a></li>
+          <p className="text-gray-300 mb-4">Let's connect!</p>
+          <ul className="space-y-3 text-gray-300">
+            <li className="flex items-center space-x-2">
+              <Mail className="w-5 h-5" />
+              <a href="mailto:tlsammons@gmail.com">tlsammons@gmail.com</a>
+            </li>
+            <li className="flex items-center space-x-2">
+              <Linkedin className="w-5 h-5" />
+              <a href="https://www.linkedin.com/in/taylor-sammons" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
+            </li>
+            <li className="flex items-center space-x-2">
+              <Github className="w-5 h-5" />
+              <a href="https://github.com/samm-son" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+            </li>
           </ul>
         </section>
       </main>
