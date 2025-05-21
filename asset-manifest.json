@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Taylor-Site/static/css/main.f3b8e623.css",
-    "main.js": "/Taylor-Site/static/js/main.c07d38d1.js",
+    "main.css": "/Taylor-Site/static/css/main.f89438c9.css",
+    "main.js": "/Taylor-Site/static/js/main.3878cd55.js",
     "index.html": "/Taylor-Site/index.html",
-    "main.f3b8e623.css.map": "/Taylor-Site/static/css/main.f3b8e623.css.map",
-    "main.c07d38d1.js.map": "/Taylor-Site/static/js/main.c07d38d1.js.map"
+    "main.f89438c9.css.map": "/Taylor-Site/static/css/main.f89438c9.css.map",
+    "main.3878cd55.js.map": "/Taylor-Site/static/js/main.3878cd55.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3b8e623.css",
-    "static/js/main.c07d38d1.js"
+    "static/css/main.f89438c9.css",
+    "static/js/main.3878cd55.js"
   ]
 }
