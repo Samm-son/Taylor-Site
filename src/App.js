@@ -25,16 +25,16 @@ export default function App() {
     <div
       className={`min-h-screen font-[Inter] transition-opacity duration-1000 transition-colors ${
         visible ? "opacity-100" : "opacity-0"
-      }`}
+      } bg-white text-black dark:bg-black dark:text-white`}
     >
-      <header className="p-6 bg-white dark:bg-black shadow-md text-black dark:text-white">
+      <header className="p-6 bg-white dark:bg-black shadow-md">
         <div className="max-w-5xl mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">Taylor Sammons</h1>
           <div className="flex items-center space-x-4">
             <nav className="space-x-4">
               <a href="#about" className="hover:underline">About</a>
               <a href="#experience" className="hover:underline">Experience</a>
-              <a href="#projects" className="hover:underline">Projects</a>
+              <a href="#education" className="hover:underline">Education</a>
               <a href="#contact" className="hover:underline">Contact</a>
             </nav>
             <button
@@ -52,7 +52,7 @@ export default function App() {
         <section id="hero" className="text-center py-20">
           <h2 className="text-4xl font-bold mb-4">Site Reliability Engineer</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6">
-            Focused on observability, automation, and building resilient cloud systems across AWS, Salesforce, and more.
+            Proven track record of improving system reliability, observability, and operational efficiency across multi-cloud environments.
           </p>
           <a
             href="/TaylorSammons_Resume.pdf"
@@ -64,42 +64,54 @@ export default function App() {
         </section>
 
         <section id="about">
-          <h3 className="text-3xl font-semibold mb-4">About Me</h3>
+          <h3 className="text-3xl font-semibold mb-4">Professional Summary</h3>
           <p className="text-gray-700 dark:text-gray-300">
-            I'm a Senior Site Reliability Engineer with a proven track record in reducing MTTD/MTTR and building monitoring platforms using tools like New Relic, GitHub Actions, and AWS. I’m passionate about making systems observable and scalable.
+            Experienced in supporting distributed systems at scale, driving proactive incident management, and automating reliability practices. Adept at partnering across teams to reduce human toil and embed SRE best practices into development lifecycles.
           </p>
         </section>
 
         <section id="experience">
-          <h3 className="text-3xl font-semibold mb-4">Experience</h3>
+          <h3 className="text-3xl font-semibold mb-4">Professional Experience</h3>
           <ul className="space-y-6">
             <li className="bg-gray-100 dark:bg-gray-900 rounded-2xl p-6 shadow-md">
-              <h4 className="text-xl font-bold">Sunnova Energy (2021 - Present)</h4>
-              <p className="text-gray-600 dark:text-gray-400 mb-2">Senior Site Reliability Engineer</p>
+              <h4 className="text-xl font-bold">Sunnova Energy – Houston, TX</h4>
+              <p className="text-gray-600 dark:text-gray-400 mb-2">Site Reliability Engineer (May 2021 – Present)</p>
               <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-                <li>Reduced MTTD by 60% across major platforms</li>
-                <li>Led monitoring initiatives across AWS, Heroku, Salesforce</li>
-                <li>Built custom alerting systems with New Relic and PagerDuty</li>
+                <li>Reduced MTTD by 60% and MTTR by up to 300% by architecting full-stack observability with New Relic.</li>
+                <li>Led root cause analysis efforts and delivered blameless postmortems.</li>
+                <li>Improved service availability to 99.99%+ with SLO/SLI instrumentation and distributed tracing.</li>
+                <li>Automated 150+ hours/month of operational toil using Python.</li>
+                <li>Built self-healing CI/CD pipelines with GitHub Actions for zero-downtime deployments.</li>
+                <li>Created custom NRQL dashboards and New Relic Apps/APIs for executive visibility.</li>
+                <li>Developed monitoring solutions for Salesforce jobs and energy telemetry microservices.</li>
+                <li>Deployed infrastructure using Terraform and CloudFormation.</li>
+              </ul>
+            </li>
+
+            <li className="bg-gray-100 dark:bg-gray-900 rounded-2xl p-6 shadow-md">
+              <h4 className="text-xl font-bold">S&S Engineering & Construction Inc. (SSECI) – Houston, TX</h4>
+              <p className="text-gray-600 dark:text-gray-400 mb-2">Technology Specialist (Dec 2018 – May 2021)</p>
+              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+                <li>Developed SharePoint tools and automated MOC workflows.</li>
+                <li>Conducted IT audits and improved infrastructure security.</li>
+                <li>Built Power BI dashboards and automated reports with VBA.</li>
+                <li>Managed SQL Server migrations and CAD support.</li>
+              </ul>
+              <p className="text-gray-600 dark:text-gray-400 mt-4 mb-2">Information Technology Consultant (May 2015 – Dec 2018)</p>
+              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+                <li>Developed OSI PI Dashboards for real-time data visualization.</li>
+                <li>Optimized Asset Framework via server reconfigurations.</li>
+                <li>Performed PSM audits at chemical refining facilities.</li>
               </ul>
             </li>
           </ul>
         </section>
 
-        <section id="projects">
-          <h3 className="text-3xl font-semibold mb-8 text-center">Projects</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="bg-gray-100 dark:bg-gray-900 rounded-2xl shadow-md p-6 hover:scale-[1.01] transition-transform duration-300">
-              <h4 className="font-bold text-xl mb-2">Salesforce Monitoring Suite</h4>
-              <p className="text-gray-700 dark:text-gray-300">
-                Real-time integration observability across all Salesforce Event types via New Relic Logs + Dashboards.
-              </p>
-            </div>
-            <div className="bg-gray-100 dark:bg-gray-900 rounded-2xl shadow-md p-6 hover:scale-[1.01] transition-transform duration-300">
-              <h4 className="font-bold text-xl mb-2">ECS Auto Scaling Optimizer</h4>
-              <p className="text-gray-700 dark:text-gray-300">
-                Reduced idle costs by 35% through intelligent metrics-based Fargate scaling.
-              </p>
-            </div>
+        <section id="education">
+          <h3 className="text-3xl font-semibold mb-4">Education</h3>
+          <div className="bg-gray-100 dark:bg-gray-900 rounded-2xl p-6 shadow-md">
+            <h4 className="text-xl font-bold">Texas Lutheran University – Seguin, TX</h4>
+            <p className="text-gray-600 dark:text-gray-400">Bachelor of Science (B.S.) in Management Information Systems (2015 – 2018)</p>
           </div>
         </section>
 
@@ -113,7 +125,7 @@ export default function App() {
             </li>
             <li className="flex items-center space-x-2">
               <Linkedin className="w-5 h-5" />
-              <a href="https://www.linkedin.com/in/taylor-sammons" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/taylor-sammons-7b4868b7/" target="_blank" rel="noopener noreferrer">
                 LinkedIn
               </a>
             </li>
